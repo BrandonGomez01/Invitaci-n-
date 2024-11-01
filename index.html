@@ -1,4 +1,5 @@
 
+
 ```
 <!DOCTYPE html>
 <html>
@@ -76,6 +77,48 @@
       font-size: 24px;
       color: #e74c3c;
     }
+    
+    .carita-triste {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+    }
+    
+    .cara {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #ffe0e0;
+    }
+    
+    .ojos {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .ojo {
+      width: 15px;
+      height: 15px;
+      background-color: #333;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 10px;
+    }
+    
+    .boca {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 10px;
+      border-radius: 0 0 10px 10px;
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
@@ -83,11 +126,33 @@
     <div class="logo-cafe"></div>
     <p class="descripcion">¿Aceptas ir a Punto Limite en Lanusita el domingo?</p>
     <div class="opciones">
-      <button>Si</button>
-      <button>No</button>
+      <button id="si">Si</button>
+      <button id="no">No</button>
     </div>
     <span class="corazon">&hearts;</span>
+    <div id="respuesta" style="display: none;"></div>
   </div>
+
+  <script>
+    document.getElementById("si").addEventListener("click", function() {
+      document.getElementById("respuesta").innerHTML = "Te parece bien a las 16 hs? Responder al WPP";
+      document.getElementById("respuesta").style.display = "block";
+    });
+    
+    document.getElementById("no").addEventListener("click", function() {
+      document.getElementById("respuesta").innerHTML = `
+        <div class="carita-triste">
+          <div class="cara"></div>
+          <div class="ojos">
+            <div class="ojo izquierdo"></div>
+            <div class="ojo derecho"></div>
+          </div>
+          <div class="boca"></div>
+        </div>
+      `;
+      document.getElementById("respuesta").style.display = "block";
+    });
+  </script>
 </body>
 </html>
 ```
