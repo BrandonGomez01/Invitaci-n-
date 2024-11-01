@@ -6,7 +6,77 @@
 <head>
   <title>Invitación a Punto Limite</title>
   <style>
-    /* Estilos omitidos para brevedad */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    
+    .contenedor {
+      width: 80%;
+      margin: 40px auto;
+      text-align: center;
+    }
+    
+    .logo-cafe {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #964B00;
+      position: relative;
+    }
+    
+    .logo-cafe::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: 30%;
+      background-color: #FFF;
+      border-radius: 50%;
+    }
+    
+    .logo-cafe::after {
+      content: "";
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20%;
+      height: 20%;
+      background-color: #FFF;
+      border-radius: 50%;
+    }
+    
+    .descripcion {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .opciones {
+      margin-top: 20px;
+    }
+    
+    .opciones button {
+      width: 100px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    .opciones button:hover {
+      background-color: #3e8e41;
+    }
+    
+    .corazon {
+      font-size: 24px;
+      color: #e74c3c;
+    }
   </style>
 </head>
 <body>
@@ -34,4 +104,6 @@
   </script>
 </body>
 </html>
+```
+
 
